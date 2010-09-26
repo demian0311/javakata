@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>devtest</groupId>
+<artifactId>devtest</artifactId>
+<packaging>pom</packaging>
+<version>1.0-SNAPSHOT</version>
+<name>devtest</name>
+<description>Developer Take Home Test - Java - Cloud</description>
+<url>http://maven.apache.org</url>
+
+   <organization>
+      <name>Demian Neidetcher</name>
+      <url>http://neidetcher.com</url>
+   </organization>
+
+   <developers>
+      <developer>
+      <id>demian0311</id>
+      <name>Demian Neidetcher</name>
+      <email>demian0311@gmail.com</email>
+      </developer>
+   </developers>
+
+   <!-- http://www.redleopard.com/2009/04/macroman-encoding-creeps-into-maven/ -->
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+   </properties>
+
+   <modules>
+      <module>q1</module>
+      <module>q2</module>
+      <module>q5</module>
+   </modules>
+   <dependencies>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>4.4</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+      <dependency>
+         <groupId>log4j</groupId>
+         <artifactId>log4j</artifactId>
+         <version>1.2.16</version>
+         <exclusions>
+            <exclusion>
+               <groupId>com.sun.jmx</groupId>
+               <artifactId>jmxri</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>com.sun.jdmk</groupId>
+               <artifactId>jmxtools</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <finalName>devtest</finalName>
+      <plugins>
+         <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+            <encoding>UTF-8</encoding>
+            <showDeprecation>true</showDeprecation>
+            <source>1.6</source>
+            <target>1.6</target>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
+</project>
