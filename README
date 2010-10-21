@@ -1,4 +1,5 @@
-
+Do this!
+git clone git://github.com/demian0311/kata.git; cd kata; mvn test
 
 q1: Find the source
 In a field, we have hidden an object with a radio transmitter. However, a battery
